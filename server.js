@@ -523,7 +523,7 @@ app.post(`/postStudentDetails`, (req, res) => {
     if (index >= 0) {
         students[index] = { ...students[index], name, gender, about, dob }
         res.status(200).json(students[index])
-    }else{
+    } else {
         res.status(500).json('NOT FOUND')
     }
 })
@@ -556,8 +556,9 @@ app.get(`/getStudentCourse/:name`, (req, res) => {
 // @ getStudentClass/:name
 app.get(`/getStudentClass/:name`, (req, res) => {
     let { name } = req.params;
-    // let studentCourse = classes.filter(course => course.students.includes(name))
-    res.status(200).json(classes);
+    let courseArr = students.find(stu => stu.name === name).courses;
+    let classArr = classes.filter(c => courseArr.includes(c.course));
+    res.status(200).json(classArr);
 })
 
 
