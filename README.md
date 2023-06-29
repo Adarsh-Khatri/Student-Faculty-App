@@ -1,7 +1,5 @@
 # Student-Faculty-App
 
-There are 2 Branches:- client and server
-
 
 FEATURES:-
 
@@ -24,6 +22,7 @@ Faculty:
 3. Faculty Can also Edit His Schduled Class
 
 
+There are 2 Branches:- client and server
 
 client:
 1. This branch includes Front-End Code
